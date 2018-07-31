@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<title>广尊科技</title>
+
+	<!-- Google font -->
+	<!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">-->
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link href="https://lib.baomitu.com/font-awesome/4.6.0/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<link href="https://lib.baomitu.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="plugins/verify/css/verify.css">
+	<link rel="stylesheet" type="text/css" href="plugins/select/css/selectFilter.css">
+	<link rel="stylesheet" type="text/css" href="plugins/icheck/skins/minimal/blue.css">
+
+	<style>
+		/*------------------------------------*\
+	Preloader
+\*------------------------------------*/
+
+
+		#preloader {
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #FFF;
+			z-index: 99999;
+		}
+
+		.preloader {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		.preloader span {
+			display: inline-block;
+			/*background-color: #6195FF;*/
+			background-color: #5bb8c1;
+			width: 25px;
+			height: 25px;
+			-webkit-animation: 1s preload ease-in-out infinite;
+			animation: preload 1s ease-in-out infinite;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			border-radius:50%;
+		}
+
+		.preloader span:nth-child(1) {
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+
+		.preloader span:nth-child(2) {
+			-webkit-animation-delay: 0.1s;
+			animation-delay: 0.1s;
+		}
+
+		.preloader span:nth-child(3) {
+			-webkit-animation-delay: 0.15s;
+			animation-delay: 0.15s;
+		}
+
+		.preloader span:nth-child(4) {
+			-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s;
+		}
+
+		@-webkit-keyframes preload {
+			0% {
+				-webkit-transform:scale(0);
+				transform:scale(0);
+			}
+			50% {
+				-webkit-transform:scale(1);
+				transform:scale(1);
+			}
+			100% {
+				-webkit-transform:scale(0);
+				transform:scale(0);
+			}
+		}
+
+		@keyframes preload {
+			0% {
+				-webkit-transform:scale(0);
+				transform:scale(0);
+			}
+			50% {
+				-webkit-transform:scale(1);
+				transform:scale(1);
+			}
+			100% {
+				-webkit-transform:scale(0);
+				transform:scale(0);
+			}
+		}
+
+	</style>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://lib.baomitu.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://lib.baomitu.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="https://api.map.baidu.com/api?v=2.0&ak=2798f1dc3c1058ff165073feaf12dfd5&s=1"></script>
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- /Preloader -->
+	<!-- Header -->
+	<header id="home">
+		<!-- Background Image -->
+		<!--<div class="bg-img" style="background-image: url('./img/background1.jpg');">-->
+			<!--<div class="overlay"></div>-->
+		<!--</div>-->
+		<div class="bg-img" style="background-image: url('./img/banner1.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="navbar-header">
+							<!-- Logo -->
+							<div class="navbar-brand">
+								<a href="index.html">
+									<img class="logo" src="img/logo-gz-black.png" alt="logo">
+									<img class="logo-alt" src="img/logo-gz-white.png" alt="logo">
+								</a>
+							</div>
+							<!-- /Logo -->
+
+							<!-- Collapse nav button -->
+							<div class="nav-collapse">
+								<span></span>
+							</div>
+							<!-- /Collapse nav button -->
+						</div>
+
+						<!--  Main navigation  -->
+						<ul class="main-nav nav navbar-nav navbar-right">
+							<li><a href="#home">首页</a></li>
+							<!--<li><a href="#portfolio">Portfolio</a></li>-->
+							<li><a href="#query">抵押估值</a></li>
+							<li><a href="#service">产品特点</a></li>
+							<!--<li><a href="#features">我们的优势</a></li>-->
+							<li><a href="#pricing">产品介绍</a></li>
+							<li><a href="#testimonial">团队介绍</a></li>
+							<!--<li class="has-dropdown"><a href="#blog">Blog</a>-->
+							<!--<ul class="dropdown">-->
+							<!--<li><a href="blog-single.html">blog post</a></li>-->
+							<!--</ul>-->
+							<!--</li>-->
+							<!--<li><a href="#about">关于我们</a></li>-->
+							<li><a href="#contact">联系我们</a></li>
+						</ul>
+						<!-- /Main navigation -->
+					</div>
+				</div>
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+
+		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+					<!-- home content -->
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							<h1 class="white-text hidden" id="slogan"> 让借钱<em style="display:inline-block!important;color:#fff;font-size:2em;" class="no-visible" id="slogan-em">没那么难</em></h1>
+							<div class="hidden" id="slogan-adv">
+								<p class="white-text">
+									<span class="slogan-advantage-item">最长可贷 <i>30</i> 年</span>
+									<span class="slogan-advantage-item">额度高至 <i>3000</i> 万</span>
+									<span class="slogan-advantage-item">无砍头息</span>
+								</p>
+								<a class="white-btn slogan-link" href="#query">抵押估值</a>
+								<a class="main-btn slogan-link" href="#pricing">产品介绍</a>
+							</div>
+						</div>
+					</div>
+					<!-- /home content -->
+				</div>
+			</div>
+		</div>
+		<!-- /home wrapper -->
+
+	</header>
+	<!-- /Header -->
+
+	<!-- 贷款查询 -->
+	<div id="query" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				<div class="section-header text-center">
+					<h2 class="title">抵押估值</h2>
+				</div>
+				<!-- /Section-header -->
+				<!-- contact form -->
+				<div class="col-md-12 text-center">
+					<form class="contact-form" id="apply-form">
+						<div class="contact-form-item clearfix">
+							<div class="contact-form-item-title">
+								姓 名 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<input type="text" class="input" placeholder="请输入姓名..." id="proposer"> <br>
+							</div>
+						</div>
+						<div class="contact-form-item clearfix">
+							<div class="contact-form-item-title">
+								邮 箱 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<input type="text" class="input" placeholder="请输入电子邮箱..." id="email"> <br>
+							</div>
+						</div>
+						<div class="contact-form-item clearfix">
+							<div class="contact-form-item-title">
+								手机号码 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<input type="text" class="input" placeholder="请输入手机号码..." id="tel"> <br>
+							</div>
+						</div>
+						<div class="contact-form-item clearfix incity">
+							<div class="contact-form-item-title">
+								所在城市 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<div class="filter-box">
+									<div class="filter-text">
+										<input class="filter-title" type="text" readonly placeholder="请选择所在城市..." id="incity"/>
+										<i class="icon icon-filter-arrow"></i>
+									</div>
+									<select name="filter" id="filter-list">
+
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="contact-form-item clearfix">
+							<div class="contact-form-item-title">
+								贷款金额(万) <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<input type="text" class="input" placeholder="请输入贷款金额..." id="loanamount"> <br>
+							</div>
+						</div>
+						<div class="contact-form-item clearfix">
+							<div class="contact-form-item-title">
+								有无房产 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content">
+								<input tabindex="3" type="radio" id="icheck-yes" name="ishouseproperty" class="choice-for-house" checked value="0">
+								<label for="icheck-yes" style="font-size: 13px;color: #666;">有</label>
+								<input tabindex="3" type="radio" id="icheck-no" name="ishouseproperty" class="choice-for-house" value="1">
+								<label for="icheck-no" style="font-size: 13px;color: #666;">无</label>
+							</div>
+						</div>
+
+						<div class="contact-form-item clearfix check">
+							<div class="contact-form-item-title">
+								校  验 <span class="required-item">*</span>
+							</div>
+							<div class="contact-form-item-content clearfix">
+								<div id="verify">
+								</div>
+							</div>
+						</div>
+
+						<div class="text-center">
+							<button class="main-btn" type="button" id="apply">确定</button>
+						</div>
+					</form>
+				</div>
+				<!-- /contact form -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /联系我们 -->
+
+	<!-- Service -->
+	<div id="service" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">产品特点</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-credit-card"></i>
+						<h3>额度弹性</h3>
+						<p>最高可至3000万，满足不同需求</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-calendar-check-o"></i>
+						<h3>期限灵活</h3>
+						<p>提供1-30年的各期限融资</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa  fa-diamond"></i>
+						<h3>专业定制</h3>
+						<p>精准定位客户需求，按需定制产品组合</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-flash "></i>
+						<h3>流程快捷</h3>
+						<p>全程跟踪，当日反馈，流畅放款</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-globe"></i>
+						<h3>覆盖域广</h3>
+						<p>北上广深及部分省会城市</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+				<!-- service -->
+				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-cny"></i>
+						<h3>无砍头息</h3>
+						<p>服务费分期,还款更轻松</p>
+					</div>
+				</div>
+				<!-- /service -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Service -->
+
+
+	<!-- Why Choose Us -->
+	<!--<div id="features" class="section md-padding bg-grey">-->
+
+		<!--&lt;!&ndash; Container &ndash;&gt;-->
+		<!--<div class="container">-->
+
+			<!--&lt;!&ndash; Row &ndash;&gt;-->
+			<!--<div class="row">-->
+
+				<!--&lt;!&ndash; why choose us content &ndash;&gt;-->
+				<!--<div class="col-md-6">-->
+					<!--<div class="section-header">-->
+						<!--<h2 class="title">我们的优势</h2>-->
+					<!--</div>-->
+					<!--&lt;!&ndash;<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>&ndash;&gt;-->
+					<!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>最高可至3000万，满足不同需求</p>-->
+					<!--</div>-->
+					<!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>提供1-30年的各期限融资</p>-->
+					<!--</div>-->
+					<!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>精准定位客户需求，按需定制产品组合</p>-->
+					<!--</div>-->
+					<!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>全程跟踪，当日反馈，流畅放款</p>-->
+					<!--</div>-->
+                    <!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>覆盖北上广深及部分省会城市</p>-->
+					<!--</div>-->
+                    <!--<div class="feature">-->
+						<!--<i class="fa fa-check"></i>-->
+						<!--<p>待更新</p>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /why choose us content &ndash;&gt;-->
+
+				<!--&lt;!&ndash; About slider &ndash;&gt;-->
+				<!--<div class="col-md-6">-->
+					<!--<div id="about-slider" class="owl-carousel owl-theme">-->
+						<!--<img class="img-responsive" src="./img/about1.jpg" alt="">-->
+						<!--<img class="img-responsive" src="./img/about2.jpg" alt="">-->
+						<!--<img class="img-responsive" src="./img/about1.jpg" alt="">-->
+						<!--<img class="img-responsive" src="./img/about2.jpg" alt="">-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /About slider &ndash;&gt;-->
+
+			<!--</div>-->
+			<!--&lt;!&ndash; /Row &ndash;&gt;-->
+
+		<!--</div>-->
+		<!--&lt;!&ndash; /Container &ndash;&gt;-->
+
+	<!--</div>-->
+	<!-- /Why Choose Us -->
+
+
+	<!-- Numbers -->
+	<div id="numbers" class="section sm-padding">
+
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('./img/background2.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- number -->
+				<div class="col-sm-4 col-xs-12">
+					<div class="number">
+						<i class="fa fa-users"></i>
+						<h3 class="white-text"><span class="counter">3000+</span></h3>
+						<span class="white-text">累计客户</span>
+					</div>
+				</div>
+				<!-- /number -->
+
+				<!-- number -->
+				<div class="col-sm-4 col-xs-12">
+					<div class="number">
+						<i class="fa fa-trophy"></i>
+						<h3 class="white-text"><span class="counter">0<span style="font-size: 24px;padding-left: 2px;">%</span>	</span></h3>
+						<span class="white-text">不良率</span>
+					</div>
+				</div>
+				<!-- /number -->
+
+				<!-- number -->
+				<div class="col-sm-4 col-xs-12">
+					<div class="number">
+						<i class="fa fa-coffee"></i>
+						<h3 class="white-text"><span class="counter">60+</span></h3>
+						<span class="white-text">合作机构</span>
+					</div>
+				</div>
+				<!-- /number -->
+
+				<!-- number -->
+				<!--<div class="col-sm-3 col-xs-6">-->
+					<!--<div class="number">-->
+						<!--<i class="fa fa-file"></i>-->
+						<!--<h3 class="white-text"><span class="counter">45</span></h3>-->
+						<!--<span class="white-text">Projects completed</span>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!-- /number -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Numbers -->
+
+	<!-- 产品介绍 -->
+	<div id="pricing" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">产品介绍</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- pricing -->
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title">尊享贷畅贷</span>
+							<div class="price">
+								<h3><span class="duration">授信高至</span>3000<span style="font-size: 12px;">万</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p>房龄高至35年</p>
+							</li>
+							<li>
+								<p>轻征信</p>
+							</li>
+							<li>
+								<p>不限借款用途</p>
+							</li>
+                            <li>
+								<p>接受独栋别墅</p>
+							</li>
+						</ul>
+						<div class="price-btn">
+							<a class="outline-btn" href="#query">立即申请</a>
+						</div>
+					</div>
+				</div>
+				<!-- /pricing -->
+
+				<!-- pricing -->
+				<div class="col-sm-4 col-sm-offset-2">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title">尊享贷博爱</span>
+							<div class="price">
+								<h3><span class="duration">二押低至</span>0.9%<span style="font-size: 12px;">月</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p>3年内先息后本</p>
+							</li>
+							<li>
+								<p>授信高至1000万</p>
+							</li>
+							<li>
+								<p>产权人年龄高至69岁</p>
+							</li>
+                            <li>
+								<p>接受非住宅房</p>
+							</li>
+						</ul>
+						<div class="price-btn">
+							<a class="outline-btn" href="#query">立即申请</a>
+						</div>
+					</div>
+				</div>
+				<!-- /pricing -->
+			</div>
+			<!-- Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Pricing -->
+
+
+	<!-- Testimonial -->
+	<div id="testimonial" class="section md-padding">
+
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('./img/background3.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Testimonial slider -->
+				<div class="col-md-10 col-md-offset-1">
+					<div class="section-header text-center">
+						<h2 class="title" style="color: #fff;">团队介绍</h2>
+					</div>
+					<div id="testimonial-slider" class="owl-carousel owl-theme">
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="./img/lu.png" alt="">
+                                <span class="leader-info">
+                                    <h3 class="white-text">陆毅文</h3> <br>
+								    <span>CEO</span>
+                                </span>
+							</div>
+							<p class="white-text">毕业于复旦大学国际金融系，先后担任民生银行、中信银行支行长，平安普惠SME销售管理部、产业金融产品部总经理，有多达20年的普惠金融领先平台的从业经历，具有丰富的中小微企业信贷业务和个人金融业务经验。</p>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="./img/chen.png" alt="">
+								<span class="leader-info">
+                                    <h3 class="white-text">陈昊</h3><br>
+								    <span>COO</span>
+                                </span>
+							</div>
+							<p class="white-text">上海交通大学高金学院MBA，对多种金融工具以及金融产品的运营以及平台建设、股权投资并购具有丰富经验，涵盖领域包括供应链金融融资、资产组合产品、证券投资类产品及衍生品、车辆金融、房产抵押贷款。先后在光大资产、平安陆金所、TCL金控担任风控及产品类高管职务。</p>
+						</div>
+						<!-- /testimonial -->
+
+					</div>
+				</div>
+				<!-- /Testimonial slider -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Testimonial -->
+
+	<!-- 团队介绍 -->
+	<!--<div id="team" class="section md-padding">-->
+
+		<!--&lt;!&ndash; Container &ndash;&gt;-->
+		<!--<div class="container">-->
+
+			<!--&lt;!&ndash; Row &ndash;&gt;-->
+			<!--<div class="row">-->
+
+				<!--&lt;!&ndash; Section header &ndash;&gt;-->
+				<!--<div class="section-header text-center">-->
+					<!--<h2 class="title">团队介绍</h2>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /Section header &ndash;&gt;-->
+
+				<!--&lt;!&ndash; team &ndash;&gt;-->
+				<!--<div class="col-sm-4">-->
+					<!--<div class="team">-->
+						<!--<div class="team-img">-->
+							<!--<img class="img-responsive" src="./img/team1.jpg" alt="">-->
+							<!--<div class="overlay">-->
+								<!--<div class="team-social">-->
+									<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+									<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+									<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="team-content">-->
+							<!--<h3>John Doe</h3>-->
+							<!--<span>Web Designer</span>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /team &ndash;&gt;-->
+
+				<!--&lt;!&ndash; team &ndash;&gt;-->
+				<!--<div class="col-sm-4">-->
+					<!--<div class="team">-->
+						<!--<div class="team-img">-->
+							<!--<img class="img-responsive" src="./img/team2.jpg" alt="">-->
+							<!--<div class="overlay">-->
+								<!--<div class="team-social">-->
+									<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+									<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+									<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="team-content">-->
+							<!--<h3>John Doe</h3>-->
+							<!--<span>Web Designer</span>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /team &ndash;&gt;-->
+
+				<!--&lt;!&ndash; team &ndash;&gt;-->
+				<!--<div class="col-sm-4">-->
+					<!--<div class="team">-->
+						<!--<div class="team-img">-->
+							<!--<img class="img-responsive" src="./img/team3.jpg" alt="">-->
+							<!--<div class="overlay">-->
+								<!--<div class="team-social">-->
+									<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+									<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+									<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="team-content">-->
+							<!--<h3>John Doe</h3>-->
+							<!--<span>Web Designer</span>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /team &ndash;&gt;-->
+
+			<!--</div>-->
+			<!--&lt;!&ndash; /Row &ndash;&gt;-->
+
+		<!--</div>-->
+		<!--&lt;!&ndash; /Container &ndash;&gt;-->
+
+	<!--</div>-->
+	<!-- /Team -->
+
+	<!-- 最新资讯 -->
+	<!--<div id="blog" class="section md-padding bg-grey">-->
+
+		<!--&lt;!&ndash; Container &ndash;&gt;-->
+		<!--<div class="container">-->
+
+			<!--&lt;!&ndash; Row &ndash;&gt;-->
+			<!--<div class="row">-->
+
+				<!--&lt;!&ndash; Section header &ndash;&gt;-->
+				<!--<div class="section-header text-center">-->
+					<!--<h2 class="title">最新资讯</h2>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /Section header &ndash;&gt;-->
+
+				<!--&lt;!&ndash; blog &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="blog">-->
+						<!--<div class="blog-img">-->
+							<!--<img class="img-responsive" src="./img/blog1.jpg" alt="">-->
+						<!--</div>-->
+						<!--<div class="blog-content">-->
+							<!--<ul class="blog-meta">-->
+								<!--<li><i class="fa fa-user"></i>John doe</li>-->
+								<!--<li><i class="fa fa-clock-o"></i>18 Oct</li>-->
+								<!--<li><i class="fa fa-comments"></i>57</li>-->
+							<!--</ul>-->
+							<!--<h3>Molestie at elementum eu facilisis sed odio</h3>-->
+							<!--<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>-->
+							<!--<a href="blog-single.html">Read more</a>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /blog &ndash;&gt;-->
+
+				<!--&lt;!&ndash; blog &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="blog">-->
+						<!--<div class="blog-img">-->
+							<!--<img class="img-responsive" src="./img/blog2.jpg" alt="">-->
+						<!--</div>-->
+						<!--<div class="blog-content">-->
+							<!--<ul class="blog-meta">-->
+								<!--<li><i class="fa fa-user"></i>John doe</li>-->
+								<!--<li><i class="fa fa-clock-o"></i>18 Oct</li>-->
+								<!--<li><i class="fa fa-comments"></i>57</li>-->
+							<!--</ul>-->
+							<!--<h3>Molestie at elementum eu facilisis sed odio</h3>-->
+							<!--<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>-->
+							<!--<a href="blog-single.html">Read more</a>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /blog &ndash;&gt;-->
+
+				<!--&lt;!&ndash; blog &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="blog">-->
+						<!--<div class="blog-img">-->
+							<!--<img class="img-responsive"  src="./img/blog3.jpg" alt="">-->
+						<!--</div>-->
+						<!--<div class="blog-content">-->
+							<!--<ul class="blog-meta">-->
+								<!--<li><i class="fa fa-user"></i>John doe</li>-->
+								<!--<li><i class="fa fa-clock-o"></i>18 Oct</li>-->
+								<!--<li><i class="fa fa-comments"></i>57</li>-->
+							<!--</ul>-->
+							<!--<h3>Molestie at elementum eu facilisis sed odio</h3>-->
+							<!--<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>-->
+							<!--<a href="blog-single.html">Read more</a>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /blog &ndash;&gt;-->
+
+			<!--</div>-->
+			<!--&lt;!&ndash; /Row &ndash;&gt;-->
+
+		<!--</div>-->
+		<!--&lt;!&ndash; /Container &ndash;&gt;-->
+
+	<!--</div>-->
+	<!-- /Blog -->
+
+	<!-- 关于我们 -->
+	<!--<div id="about" class="section md-padding">-->
+		<!--&lt;!&ndash; Container &ndash;&gt;-->
+		<!--<div class="container">-->
+			<!--<div class="row">-->
+
+				<!--&lt;!&ndash; Section header &ndash;&gt;-->
+				<!--<div class="section-header text-center">-->
+					<!--<h2 class="title">关于我们</h2>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /Section header &ndash;&gt;-->
+
+				<!--&lt;!&ndash; about &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="about">-->
+						<!--<i class="fa fa-cogs"></i>-->
+						<!--<h3>Fully Customizible</h3>-->
+						<!--<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>-->
+						<!--<a href="#">Read more</a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /about &ndash;&gt;-->
+
+				<!--&lt;!&ndash; about &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="about">-->
+						<!--<i class="fa fa-magic"></i>-->
+						<!--<h3>Awesome Features</h3>-->
+						<!--<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>-->
+						<!--<a href="#">Read more</a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /about &ndash;&gt;-->
+
+				<!--&lt;!&ndash; about &ndash;&gt;-->
+				<!--<div class="col-md-4">-->
+					<!--<div class="about">-->
+						<!--<i class="fa fa-mobile"></i>-->
+						<!--<h3>Fully Responsive</h3>-->
+						<!--<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>-->
+						<!--<a href="#">Read more</a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /about &ndash;&gt;-->
+
+			<!--</div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash; /关于我们 &ndash;&gt;-->
+	<!--</div>-->
+	<!-- /About -->
+
+	<!-- 联系我们 -->
+	<div id="contact" class="section md-padding" style="padding-bottom: 40px;">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				<div class="section-header text-center">
+					<h2 class="title">联系我们</h2>
+				</div>
+				<!-- /Section-header -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-phone"></i>
+						<h3>电话</h3>
+						<p>021-80126312</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-envelope"></i>
+						<h3>邮件</h3>
+						<p><a href="mailto:customer@goodzoomtech.com" style="color: #868F9B;">customer@goodzoomtech.com</a></p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-map-marker"></i>
+						<h3>地址</h3>
+						<p>上海市友力国际大厦2702室 </p>
+					</div>
+				</div>
+				<!-- /contact -->
+				<div class="col-md-12" id="map">
+
+
+				</div>
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /联系我们 -->
+
+
+	<!-- Footer -->
+	<footer id="footer" class="bg-dark text-center">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<div class="col-md-12">
+					<a href="index.html" style="display: inline-block;"><img style="position: relative;top:-10px;" src="img/logo-gz-white.png" alt="logo" width="180" height="60"></a>
+
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<p>Copyright © 2018 广尊科技 All Rights Reserved <a class="foot-icp-link" href="http://www.miitbeian.gov.cn/">沪ICP 1802648 号</a></p>
+					</div>
+					<!-- /footer copyright -->
+				</div>
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</footer>
+	<!-- /Footer -->
+
+	<!-- Back to top -->
+	<div id="back-to-top"></div>
+	<!-- /Back to top -->
+
+	<!-- jQuery Plugins -->
+	<script src="https://lib.baomitu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="plugins/verify/js/verify.js" ></script>
+	<script src="plugins/select/js/selectFilter.js"></script>
+	<script src="plugins/icheck/icheck.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="patternLayout">[%d{yyyy-MM-dd'T'HH:mm:ss,SSSXXX}] %-5p [%t] %c{2} - %m%n</Property>
+        <Property name="logdir">D:/tmp/</Property>
+    </Properties>
+    <Appenders><!--  //这是定义consle输出的 -->
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+        	<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+           <!--  <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/> -->
+            <PatternLayout pattern="%d{yyyy.MM.dd 'at' HH:mm:ss z} %-5level %class{36} %M() @%L - %msg%n"/>
+        </Console>
+        <Async name="ASYNC">
+            <AppenderRef ref="CONSOLE"/> 
+        </Async>
+	 <!-- //RollingFileAppender,循环写入文件。达到设置的大小，就把格式变成filePattern定义的    
+	//定义debug的输出形式，循环写成文件 -->
+    <RollingFile name="DebugLogger" fileName="${logdir}/logs/debug/debug.log"
+                 filePattern="${logdir}/logs/debug/info/info-%d{yyyy-MM-dd}-debug-%i.log" append="true">
+        <!-- <RollingFile name="DebugLogger" fileName="${logdir}/logs/debug/log.log"
+                  append="true"> -->
+        <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+        <PatternLayout pattern="${patternLayout}"/>
+        
+        <DefaultRolloverStrategy>
+        	<Delete basePath="${logdir}/logs/debug" maxDepth="2">
+        			<!-- IfFileName使用正则表达式匹配需要删除的日志的格式 -->
+                    <IfFileName glob="*/info-*.log" />
+                    <!-- 表示日志的有效期，单位有s、m、h、d -->
+                    <IfLastModified age="15d" />
+            </Delete>
+			
+        </DefaultRolloverStrategy>
+        <Policies>
+	        <!--设置每天打包日志一次-->
+	        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+	        <!--设置日志文件满50MB后打包 -->
+	        <SizeBasedTriggeringPolicy size="50 MB" /> 
+	    </Policies>
+    </RollingFile>
+
+    <RollingFile name="InfoLogger" fileName="${logdir}/logs/info/info.log"
+                filePattern="${logdir}/logs/info/info/info-%d{yyyy-MM-dd}-info-%i.log"  append="true">
+        <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+        <PatternLayout pattern="${patternLayout}"/>
+        <DefaultRolloverStrategy>
+        	<Delete basePath="${logdir}/logs/info" maxDepth="2">
+        			<!-- IfFileName使用正则表达式匹配需要删除的日志的格式 -->
+                    <IfFileName glob="*/info-*.log" />
+                    <!-- 表示日志的有效期，单位有s、m、h、d -->
+                    <IfLastModified age="15d" />
+            </Delete>
+			
+        </DefaultRolloverStrategy>
+        <Policies>
+            <!--设置每天打包日志一次-->
+	        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+	        <!--设置日志文件满50MB后打包 -->
+	        <SizeBasedTriggeringPolicy size="50 MB" />
+        </Policies>
+    </RollingFile>
+
+    <!--add  by  yu-->
+    <RollingFile name="importDataLog" fileName="${logdir}/logs/priceMonitor/priceMonitor.log"
+                filePattern="${logdir}/logs/priceMonitor/priceMonitor-%i.log"   append="true">
+        <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+        <PatternLayout pattern="${patternLayout}"/>
+        <DefaultRolloverStrategy>
+        	<Delete basePath="${logdir}/logs/priceMonitor" maxDepth="2">
+        			<!-- IfFileName使用正则表达式匹配需要删除的日志的格式 -->
+                    <IfFileName glob="*/priceMonitor-*.log" />
+                    <!-- 表示日志的有效期，单位有s、m、h、d -->
+                    <IfLastModified age="15d" />
+            </Delete>
+
+        </DefaultRolloverStrategy>
+        <Policies>
+            <!--设置每天打包日志一次-->
+	        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+	        <!--设置日志文件满50MB后打包 -->
+	        <SizeBasedTriggeringPolicy size="50 MB" />
+        </Policies>
+    </RollingFile>
+    <!--end-->
+
+
+    <RollingFile name="WarnLogger" fileName="${logdir}/logs/warn/warn.log"
+                filePattern="${logdir}/logs/warn/info/info-%d{yyyy-MM-dd}-warn-%i.log"  append="true">
+        <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+        <PatternLayout pattern="${patternLayout}"/>
+        <DefaultRolloverStrategy>
+        	<Delete basePath="${logdir}/logs/warn" maxDepth="2">
+        			<!-- IfFileName使用正则表达式匹配需要删除的日志的格式 -->
+                    <IfFileName glob="*/info-*.log" />
+                    <!-- 表示日志的有效期，单位有s、m、h、d -->
+                    <IfLastModified age="15d" />
+            </Delete>
+
+        </DefaultRolloverStrategy>
+        <Policies>
+            <!--设置每天打包日志一次-->
+	        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+	        <!--设置日志文件满50MB后打包 -->
+	        <SizeBasedTriggeringPolicy size="50 MB" />
+        </Policies>
+    </RollingFile>
+
+    <RollingFile name="ErrorLogger" fileName="${logdir}/logs/error/error.log"
+              filePattern="${logdir}/logs/error/info/info-%d{yyyy-MM-dd}-error-%i.log"   append="true">
+        <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+        <PatternLayout pattern="${patternLayout}"/>
+        <DefaultRolloverStrategy>
+        	<Delete basePath="${logdir}/logs/error" maxDepth="2">
+        			<!-- IfFileName使用正则表达式匹配需要删除的日志的格式 -->
+                    <IfFileName glob="*/info-*.log" />
+                    <!-- 表示日志的有效期，单位有s、m、h、d -->
+                    <IfLastModified age="15d" />
+            </Delete>
+
+        </DefaultRolloverStrategy>
+        <Policies>
+            <!--设置每天打包日志一次-->
+	        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+	        <!--设置日志文件满50MB后打包 -->
+	        <SizeBasedTriggeringPolicy size="50 MB" />
+        </Policies>
+    </RollingFile>
+	
+	</Appenders>
+<loggers>
+    <root level="info">
+        <AppenderRef ref="ASYNC"/>
+        <appender-ref ref="DebugLogger"/>
+        <appender-ref ref="InfoLogger"/>
+        <appender-ref ref="WarnLogger"/>
+        <appender-ref ref="ErrorLogger"/>
+    </root>
+    
+    <!-- //如果同时满足这个和上面的,additivity属性是否重复输出。
+    //appender-ref ref指定上面定义的name  -->
+    
+    <logger name="com.gz.mapper" level="debug" additivity="false">
+        <appender-ref ref="importDataLog"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+</loggers>
+</Configuration>

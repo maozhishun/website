@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gz.mapper.ProposerInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gz.model.ProposerInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="proposer" property="proposer" jdbcType="VARCHAR" />
+    <result column="inCity" property="incity" jdbcType="BIGINT" />
+    <result column="isHouseProperty" property="ishouseproperty" jdbcType="INTEGER" />
+    <result column="loanAmount" property="loanamount" jdbcType="INTEGER" />
+    <result column="proposerIP" property="proposerip" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="BIGINT" />
+    <result column="modifyTime" property="modifytime" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="base_column">
+  		id,proposer,inCity,isHouseProperty,loanAmount,proposerIP,email,tel,createTime,modifyTime
+  </sql>
+  <select id = "getTheUserInfoByTelAndProposer" parameterType="com.gz.bean.ProposerInfoBean" resultMap="BaseResultMap">
+  		select
+  		id,
+  		proposer,
+  		inCity,
+  		isHouseProperty,
+  		loanAmount,
+  		proposerIP,
+  		email,
+  		tel,
+  		createTime,
+  		modifyTime
+  		from homeset.proposer_info
+  		where 1=1
+  		and proposer = #{proposer,jdbcType=VARCHAR}
+  		and tel = #{tel,jdbcType=VARCHAR}
+  		limit 1
+  		
+  		
+  		
+  </select>
+  <select id="listProposerInfoCount" parameterType="com.gz.bean.ProposerInfoBean" resultType="java.lang.Integer">
+  		select
+  		count(*)
+  		from homeset.proposer_info
+  		where 1=1
+  		<if test="startTime != null">
+  			and createTime &gt; #{startTime,jdbcType=BIGINT}
+  		</if>
+  		<if test="endTime != null">
+  			and createTime &lt; #{endTime,jdbcType=BIGINT}
+  		</if>
+  		
+  		
+  </select>
+  <select id="listProposerInfo" parameterType="com.gz.bean.ProposerInfoBean" resultType="java.util.Map">
+  		select
+  		<include refid="base_column" />
+  		from homeset.proposer_info
+  		where 1=1
+  		<if test="startTime != null">
+  			and createTime &gt; #{startTime,jdbcType=BIGINT}
+  		</if>
+  		<if test="endTime != null">
+  			and createTime &lt; #{endTime,jdbcType=BIGINT} 
+  		</if>
+  		<if test="orderBy != null">
+  			order by ${orderBy}
+  		</if>
+  		<if test="isLimit == 0">
+  			LIMIT #{beginNum,jdbcType=INTEGER},#{checkNum,jdbcType=INTEGER}
+  		</if>
+  		
+  </select>
+</mapper>

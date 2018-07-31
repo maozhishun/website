@@ -1,0 +1,9 @@
+spring:
+  mail:
+    port: 25
+    username: op.alert@goodzoomtech.com
+    password: mQhZpATu5bkxNiBD
+    #Gz2018//
+    protocol: smtp
+    default-encoding: utf-8
+    host: smtp.exmail.qq.com
