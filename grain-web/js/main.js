@@ -13,6 +13,7 @@ $(function() {
   $('#preloader')
     .delay(600)
     .fadeOut()
+
   ;('use strict')
 
   // Banner slogan animations
@@ -124,7 +125,7 @@ $(function() {
   })
 
   $('#testimonial-slider').owlCarousel({
-    loop: false,
+    loop: true,
     margin: 20,
     dots: true,
     nav: false,
@@ -177,7 +178,7 @@ $(function() {
   // Baidu Map init
   ShowMap(
     '121.450943,31.250148',
-    '广尊科技',
+    '冠润科技',
     '上海市普陀区江宁路1158号友力国际大厦2702室',
     '021-80126312',
     '',
